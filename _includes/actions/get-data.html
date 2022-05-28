@@ -1,8 +1,10 @@
 <script>
     var data = window.localStorage.getItem('{{ include.get-this }}');
     {% if include.put-it-here %}
-    $('#{{ include.put-it-here}}').val(data);
+    $('#{{ include.put-it-here }}').val(data);
     {% else %}
-    document.write('<p>' + data + '</p>');
+    document.write('<span id={{ include.get-this }}>' + data + '</span>');
     {% endif %}
+    $('input:radio[name={{ include.put-it-here }}]:eq(' + data + ')').attr('checked', true);
+    // $("input:radio[name={{ include.put-it-here}}]").index(data).attr('checked', true);
 </script>
