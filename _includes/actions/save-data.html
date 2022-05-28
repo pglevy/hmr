@@ -4,5 +4,13 @@
         var name = $(this).attr('name');
         var data = $(this).val();
         window.localStorage.setItem(page + '-' + name, data);
-    });    
+    });
+    $("input:radio").on('change', function(){
+        var name = $(this).attr('name');
+        var radioButtons = $("input:radio[name=" + name + "]");
+        var checkedButton = radioButtons.filter(':checked').attr('id');
+        var selectedIndex = radioButtons.index(radioButtons.filter(':checked'));
+        window.localStorage.setItem(page + '-' + name + '-index', selectedIndex);
+        console.log(checkedButton);
+    })    
 </script>
