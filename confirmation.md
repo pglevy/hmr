@@ -1,9 +1,8 @@
 ---
-layout: centered-column
-title: USPS Hold Mail Service
-body-style: bg-base-lightest
-layout-style: tablet:width-tablet bg-white margin-top-6 padding-5 radius-lg shadow-3
+layout: grid-container
+title: USPS Hold Mail Service Confirmation
 prose: true
+body-style: line-height-sans-4
 ---
 
 # Your mail hold request is confirmed
